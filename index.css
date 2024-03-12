@@ -1,0 +1,653 @@
+* {
+  margin: 0px;
+  box-sizing: border-box;
+  font-family: cursive;
+}
+body {
+  background-color: white;
+  opacity: 75%;
+  overflow: scroll;
+}
+/*navbar---------------------------------------------------------------------------------------------*/
+nav {
+  width: 100%;
+  height: 120px;
+  background-color: white;
+  opacity: 75%;
+  position: relative;
+  border-bottom: 0.2px solid hsl(219, 9%, 45%);
+}
+
+.brandname {
+  width: 15%;
+  height: 110px;
+
+  position: absolute;
+  left: 0px;
+  top: 20px;
+
+  text-align: center;
+  margin-left: 8%;
+  padding-top: 20px;
+  font-size: 27px;
+  font-weight: 700;
+}
+.links {
+  position: absolute;
+  left: 24%;
+  top: 20px;
+
+  width: 30%;
+  height: 110px;
+  text-align: center;
+}
+.links a {
+  text-decoration: none;
+  color: hsl(219, 9%, 45%);
+  display: inline-block;
+  margin: 30px 15px;
+  position: relative;
+}
+
+a::before {
+  content: " ";
+  width: 0%;
+  height: 4px;
+  background-color: hsl(26, 100%, 55%);
+  position: absolute;
+  bottom: -47px;
+  left: 0px;
+}
+a:hover::before {
+  width: 100%;
+  transition-duration: 0.5s;
+}
+a:hover {
+  color: black;
+}
+.icon {
+  position: absolute;
+  right: 10%;
+  top: 20px;
+
+  width: 30%;
+  height: 90px;
+  display: flex;
+  align-items: center;
+  justify-content: right;
+}
+#iconphoto {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  border: 3px solid hsl(26, 100%, 55%);
+  margin: 0px 30px;
+  position: relative;
+}
+/*cart note-----------------------------------------------------------------------------------------------------------*/
+#note {
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  background-color: hsl(26, 100%, 55%);
+  color: white;
+  position: absolute;
+  top: 25px;
+  right: 110px;
+  display: flex;
+  text-align: center;
+  align-items: center;
+  justify-content: center;
+}
+
+#iconcart {
+  background-color: transparent;
+  color: hsl(26, 100%, 55%);
+  border: none;
+  margin-right: 10px;
+  width: 35px;
+  height: 50px;
+  cursor: pointer;
+}
+/* cart empty*********------------------------------------------------------------------------------------------*/
+#cart {
+  width: 350px;
+  height: 250px;
+
+  position: absolute;
+  right: 8%;
+  top: 100px;
+  background-color: white;
+
+  box-shadow: 0px 8px 25px 0.5px hsl(219, 9%, 45%);
+  border-radius: 5px;
+  z-index: 10;
+  display: none;
+}
+#cart h2 {
+  padding-left: 20px;
+  width: 100%;
+  height: 60px;
+  border-bottom: 0.2px solid hsl(219, 9%, 45%);
+}
+
+#cart h3 {
+  margin-left: 90px;
+  margin-top: 60px;
+  color: hsl(219, 9%, 45%);
+}
+#product {
+  width: 100%;
+  height: 100px;
+
+  margin-top: 20px;
+
+  padding: 20px;
+  position: relative;
+}
+#product img {
+  width: 60px;
+  height: 60px;
+  border: 3px solid hsl(26, 100%, 55%);
+  border-radius: 7px;
+}
+#product h6 {
+  color: hsl(219, 9%, 45%);
+  position: absolute;
+  left: 30%;
+  top: 20px;
+  text-transform: capitalize;
+  font-size: 15px;
+}
+#product p {
+  color: hsl(219, 9%, 45%);
+  position: absolute;
+  left: 30%;
+  top: 45px;
+  text-transform: capitalize;
+  font-size: 15px;
+  font-weight: 200;
+}
+#product h3 {
+  color: black;
+  position: absolute;
+  left: 30%;
+  top: -17px;
+  text-transform: capitalize;
+  font-size: 20px;
+  font-weight: 700;
+}
+#checkout {
+  width: 100%;
+  height: 40px;
+  color: white;
+  background-color: hsl(26, 100%, 55%);
+  border: none;
+  border-radius: 10px;
+  box-shadow: 0px 5px 20px 0.5px hsl(26, 99%, 54%);
+  cursor: pointer;
+}
+.empty {
+  display: none;
+}
+
+/*main body-------------------------------------------------------------------------------------------------*/
+
+.body {
+  width: 70%;
+  height: 550px;
+  margin: auto;
+  overflow: hidden;
+
+  margin-top: 70px;
+  z-index: 1;
+  position: relative;
+}
+img {
+  cursor: pointer;
+}
+.body img:hover {
+  border: 4px solid hsl(26, 100%, 55%);
+  transition-duration: 0.2s;
+  transition-timing-function: linear;
+}
+.allphoto {
+  width: 50%;
+  height: 550px;
+}
+#mainphoto {
+  width: 100%;
+  height: 430px;
+}
+#mainphoto img {
+  width: 80%;
+  height: 430px;
+  border-radius: 15px;
+}
+.otherphoto {
+  width: 80%;
+  height: 120px;
+  display: flex;
+  justify-content: space-between;
+}
+.otherphoto img {
+  width: 20%;
+  height: 80px;
+  border-radius: 15px;
+  margin-top: 15px;
+}
+.process {
+  width: 47%;
+  height: 550px;
+  position: absolute;
+  left: 50%;
+  top: 0px;
+  padding-top: 55px;
+  padding-right: 30px;
+}
+
+.process h6 {
+  font-size: 17px;
+  font-weight: 200;
+  color: hsl(26, 100%, 55%);
+  margin-bottom: 10px;
+}
+.process h1 {
+  margin-bottom: 30px;
+}
+.process P {
+  color: hsl(219, 9%, 45%);
+  margin-bottom: 20px;
+}
+
+.process .price {
+  width: fit-content;
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 10px;
+}
+.process .price h3 {
+  margin-right: 20px;
+  font-size: 30px;
+  font-weight: 700;
+}
+.process .price h4 {
+  width: 47px;
+  height: 25px;
+  margin-top: 10px;
+  text-align: center;
+  color: hsl(26, 100%, 55%);
+  background-color: hsl(25, 100%, 94%);
+  border-radius: 5px;
+}
+.process h5 {
+  text-decoration: line-through;
+  color: hsl(219, 9%, 45%);
+}
+#add {
+  width: 250px;
+  height: 50px;
+  position: absolute;
+  right: 15%;
+  bottom: 15%;
+  background-color: hsl(26, 99%, 54%);
+  color: white;
+  border-radius: 10px;
+  border: none;
+  box-shadow: 0px 5px 20px 0.5px hsl(26, 99%, 54%);
+  cursor: pointer;
+}
+
+.button {
+  width: 30%;
+  height: 50px;
+  background-color: hsl(223, 64%, 98%);
+  opacity: 75%;
+  position: absolute;
+  left: 0;
+  bottom: 15%;
+  font-size: 17px;
+  font-weight: 700;
+  border: none;
+
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+#plus {
+  width: 30%;
+  height: 50px;
+  font-size: 30px;
+  font-weight: 700;
+  border: none;
+  cursor: pointer;
+  color: hsl(26, 99%, 54%);
+  background-color: transparent;
+}
+#negative {
+  width: 30%;
+  height: 50px;
+  font-size: 30px;
+  font-weight: 700;
+  border: none;
+  cursor: pointer;
+  color: hsl(26, 99%, 54%);
+  background-color: transparent;
+}
+.attribution {
+  position: absolute;
+  bottom: -50px;
+  left: 35%;
+}
+.attribution a {
+  text-decoration: none;
+  color: hsl(26, 99%, 54%);
+}
+
+@media (max-width: 377px) {
+  body {
+    background-color: white;
+    opacity: 75%;
+    overflow: scroll;
+  }
+
+  nav {
+    width: 100%;
+    height: 80px;
+    background-color: white;
+    opacity: 75%;
+    position: relative;
+    border-bottom: 0.2px solid hsl(219, 9%, 45%);
+  }
+
+  .brandname {
+    width: 17%;
+    height: 110px;
+
+    position: absolute;
+    left: 30px;
+    top: 5px;
+
+    text-align: center;
+    margin-left: 8%;
+    padding-top: 20px;
+    font-size: 27px;
+    font-weight: 700;
+  }
+  #list {
+    position: absolute;
+    left: -30px;
+    top: 25px;
+    margin-right: 10px;
+    cursor: pointer;
+  }
+  .links {
+    position: absolute;
+    left: 0%;
+    top: 0px;
+    width: 70%;
+    height: 840px;
+    text-align: center;
+    background-color: white;
+    z-index: 5;
+    display: none;
+  }
+  .links a {
+    text-decoration: none;
+    color: black;
+    display: inline-block;
+    margin: 40px 0px;
+    position: relative;
+    width: 100%;
+  }
+  .x {
+    color: black;
+    background-color: white;
+    position: absolute;
+    width: 50px;
+    height: 50px;
+    top: 0px;
+    right: 20px;
+    font-size: 20px;
+    font-weight: 700;
+    cursor: pointer;
+  }
+
+  .icon {
+    position: absolute;
+    right: 1%;
+    top: 5px;
+
+    width: 30%;
+    height: 90px;
+    display: flex;
+    align-items: center;
+    justify-content: right;
+  }
+  #iconphoto {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    border: 3px solid hsl(26, 100%, 55%);
+    margin: 0px 30px;
+    position: relative;
+  }
+  /*cart empty-----------------------------------------------------------------------------------*/
+  #cart {
+    width: 350px;
+    height: 250px;
+
+    position: absolute;
+    right: 3%;
+    top: 100px;
+    background-color: white;
+
+    box-shadow: 0px 8px 25px 0.5px hsl(219, 9%, 45%);
+    border-radius: 5px;
+    z-index: 10;
+    display: none;
+  }
+  #note {
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    background-color: hsl(26, 100%, 55%);
+    color: white;
+    position: absolute;
+    top: 20px;
+    right: 100px;
+    display: flex;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+  }
+  /*main body-------------------------------------------------------------------------------------*/
+  .body {
+    width: 100%;
+    height: 950px;
+    margin: auto;
+
+    margin-top: 0px;
+    z-index: 1;
+    position: relative;
+  }
+  img {
+    cursor: pointer;
+  }
+  .body img:hover {
+    border: 4px solid hsl(26, 100%, 55%);
+    transition-duration: 0.2s;
+    transition-timing-function: linear;
+  }
+  .allphoto {
+    width: 100%;
+    height: 300px;
+  }
+  #mainphoto {
+    width: 100%;
+    height: 300px;
+  }
+  #mainphoto img {
+    width: 100%;
+    height: 300px;
+    border-radius: 0px;
+  }
+  .otherphoto {
+    width: 100%;
+    height: 100px;
+    display: flex;
+    justify-content: space-between;
+  }
+  .otherphoto img {
+    width: 20%;
+    height: 80px;
+    border-radius: 0px;
+    margin-top: 5px;
+  }
+  .process {
+    width: 100%;
+    height: 500px;
+    position: absolute;
+    left: 0%;
+    top: 350px;
+    margin-top: 40px;
+    padding-top: 10px;
+    padding-left: 30px;
+    border-top: 1px solid hsl(223, 64%, 98%);
+  }
+
+  .process h6 {
+    font-size: 17px;
+    font-weight: 200;
+    color: hsl(26, 100%, 55%);
+    margin-bottom: 10px;
+  }
+  .process h1 {
+    margin-bottom: 30px;
+  }
+  .process P {
+    color: hsl(219, 9%, 45%);
+    margin-bottom: 20px;
+  }
+
+  .process .price {
+    width: fit-content;
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 10px;
+  }
+  .process .price h3 {
+    margin-right: 20px;
+    font-size: 30px;
+    font-weight: 700;
+  }
+  .process .price h4 {
+    width: 47px;
+    height: 25px;
+    margin-top: 10px;
+    text-align: center;
+    color: hsl(26, 100%, 55%);
+    background-color: hsl(25, 100%, 94%);
+    border-radius: 5px;
+  }
+  .process h5 {
+    text-decoration: line-through;
+    color: hsl(219, 9%, 45%);
+    position: absolute;
+    right: 20px;
+    top: 310px;
+  }
+  #add {
+    width: 90%;
+
+    height: 50px;
+    position: absolute;
+    right: 5%;
+    bottom: 5%;
+    background-color: hsl(26, 99%, 54%);
+    color: white;
+    border-radius: 5px;
+    border: none;
+    cursor: pointer;
+  }
+
+  .button {
+    width: 100%;
+    height: 50px;
+    background-color: hsl(223, 64%, 98%);
+    opacity: 75%;
+    position: absolute;
+    left: 0%;
+    bottom: 20%;
+    font-size: 20px;
+    font-weight: 900;
+    border: none;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  #plus {
+    width: 30%;
+    height: 50px;
+    font-size: 40px;
+    font-weight: 700;
+    border: none;
+    cursor: pointer;
+    color: hsl(26, 99%, 54%);
+    background-color: transparent;
+  }
+  #negative {
+    width: 30%;
+    height: 50px;
+    font-size: 40px;
+    font-weight: 700;
+    border: none;
+    cursor: pointer;
+    color: hsl(26, 99%, 54%);
+    background-color: transparent;
+  }
+  .attribution {
+    position: absolute;
+    bottom: -80px;
+    left: 5%;
+  }
+  .attribution a {
+    text-decoration: none;
+    color: hsl(26, 99%, 54%);
+  }
+}
+
+@media (min-width: 378px) and (max-width: 1440px) {
+  .brandname {
+    width: 13%;
+    height: 110px;
+
+    position: absolute;
+    left: 0px;
+    top: 20px;
+
+    text-align: center;
+    margin-left: 8%;
+    padding-top: 20px;
+    font-size: 27px;
+    font-weight: 700;
+  }
+  .links {
+    position: absolute;
+    left: 24%;
+    top: 20px;
+
+    width: 35%;
+    height: 110px;
+    text-align: center;
+  }
+  .links a {
+    text-decoration: none;
+    color: hsl(219, 9%, 45%);
+    display: inline-block;
+    margin: 30px 15px;
+    position: relative;
+  }
+}
